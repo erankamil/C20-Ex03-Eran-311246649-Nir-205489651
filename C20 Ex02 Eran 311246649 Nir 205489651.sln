@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C20_Ex01_Eran__311246649_Nir_205489651", "C20 Ex01 Eran  311246649 Nir 205489651\C20_Ex01_Eran__311246649_Nir_205489651.csproj", "{6DE27921-5100-4E14-96CD-CD2954A807C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceBookAppLogic", "FaceBookAppLogic\FaceBookAppLogic.csproj", "{7C226728-042E-46E8-9C43-627BF4604300}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3661385A-D5F4-435F-9910-0A68AD3A1289}"
+	ProjectSection(SolutionItems) = preProject
+		README.txt = README.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DE27921-5100-4E14-96CD-CD2954A807C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DE27921-5100-4E14-96CD-CD2954A807C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DE27921-5100-4E14-96CD-CD2954A807C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DE27921-5100-4E14-96CD-CD2954A807C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C226728-042E-46E8-9C43-627BF4604300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C226728-042E-46E8-9C43-627BF4604300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C226728-042E-46E8-9C43-627BF4604300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C226728-042E-46E8-9C43-627BF4604300}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2BFD1759-7597-4968-BDF2-C53E096DC164}
+	EndGlobalSection
+EndGlobal

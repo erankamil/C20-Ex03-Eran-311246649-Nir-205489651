@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6DE27921-5100-4E14-96CD-CD2954A807C6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>C20_Ex01_Eran__311246649_Nir_205489651</RootNamespace>
+    <AssemblyName>C20 Ex01 Eran  311246649 Nir 205489651</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Facebook">
+      <HintPath>.\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="FbGraphApiWrapper">
+      <HintPath>.\FbGraphApiWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DesignedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DesignedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAccount.Designer.cs">
+      <DependentUpon>FormAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCheckInsDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCheckInsDetails.Designer.cs">
+      <DependentUpon>FormCheckInsDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDislikeFeature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDislikeFeature.Designer.cs">
+      <DependentUpon>FormDislikeFeature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFaceLoveFeature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFaceLoveFeature.Designer.cs">
+      <DependentUpon>FormFaceLoveFeature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFriendsDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFriendsDetails.Designer.cs">
+      <DependentUpon>FormFriendsDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPleaseWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPleaseWait.Designer.cs">
+      <DependentUpon>FormPleaseWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPostDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPostDetails.Designer.cs">
+      <DependentUpon>FormPostDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSendMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSendMessage.Designer.cs">
+      <DependentUpon>FormSendMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAccount.resx">
+      <DependentUpon>FormAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCheckInsDetails.resx">
+      <DependentUpon>FormCheckInsDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDislikeFeature.resx">
+      <DependentUpon>FormDislikeFeature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFaceLoveFeature.resx">
+      <DependentUpon>FormFaceLoveFeature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFriendsDetails.resx">
+      <DependentUpon>FormFriendsDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPleaseWait.resx">
+      <DependentUpon>FormPleaseWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPostDetails.resx">
+      <DependentUpon>FormPostDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSendMessage.resx">
+      <DependentUpon>FormSendMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\FacebookWrapper.ObjectModel.Checkin.datasource" />
+    <None Include="Properties\DataSources\FacebookWrapper.ObjectModel.Post.datasource" />
+    <None Include="Properties\DataSources\FacebookWrapper.ObjectModel.User.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12154heavyheartexclamation_110402.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\love_icon-icons.com_67808.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dislike.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\like.0.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location-pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\party.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dislike1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dislike %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FaceBookAppLogic\FaceBookAppLogic.csproj">
+      <Project>{7c226728-042e-46e8-9c43-627bf4604300}</Project>
+      <Name>FaceBookAppLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
