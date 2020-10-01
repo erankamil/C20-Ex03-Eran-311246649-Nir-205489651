@@ -8,7 +8,7 @@ using FaceBookAppLogic;
 
 namespace C20_Ex01_Eran__311246649_Nir_205489651
 { 
-    public static class Program 
+    public static class Program //check
     {
         [STAThread]
         public static void Main()
