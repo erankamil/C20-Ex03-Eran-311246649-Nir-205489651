@@ -98,6 +98,7 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
         {
             try
             {
+                m_CurrentFriendIndex++;
                 this.pictureBoxFriendProfile.LoadAsync(i_CurrentSingleFriend.PictureNormalURL);
                 this.pictureBoxFriendProfile.BackgroundImageLayout = ImageLayout.Stretch;
                 this.pictureBoxFriendProfile.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -106,7 +107,6 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
                 this.labelFriendName.Text = $"Name: {i_CurrentSingleFriend.FirstName}";
                 this.labelFriendAge.Text = $"Age: {AppManager.Instance.GetFriendAge(i_CurrentSingleFriend.Birthday)}";   
                 this.labelUserResidence.Text = $"Location: {i_CurrentSingleFriend.Location.Name}";
-                m_CurrentFriendIndex++;
             }
             catch(Exception ex)
             {

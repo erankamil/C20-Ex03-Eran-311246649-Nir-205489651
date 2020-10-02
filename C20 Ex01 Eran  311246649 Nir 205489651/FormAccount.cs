@@ -191,8 +191,8 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
 
         private void changeCoverPhoto()
         {
-            ChangeCoverPictureForm changeCoverPictureForm = new ChangeCoverPictureForm();
-            changeCoverPictureForm.CoverPhotoChangedNotifier += coverPhotoChangeListener;
+            FormChangeCoverPicture changeCoverPictureForm = new FormChangeCoverPicture();
+            changeCoverPictureForm.CoverPhotoChanged += coverPhotoChangeListener;
             changeCoverPictureForm.ShowDialog();
         }
 

@@ -12,15 +12,13 @@ using FaceBookAppLogic;
 
 namespace C20_Ex01_Eran__311246649_Nir_205489651
 {
-    public delegate void CoverPhotoChanged(String i_PhotoURL);
-
-    public partial class ChangeCoverPictureForm : Form
+    public partial class FormChangeCoverPicture : Form
     {
-        public event CoverPhotoChanged CoverPhotoChangedNotifier;
+        public event Action<string> CoverPhotoChanged;
 
         public string PhotoURL { get; set; }
 
-        public ChangeCoverPictureForm()
+        public FormChangeCoverPicture()
         {
             InitializeComponent();
             this.buttonRandPhoto.Click += ButtonRandPhoto_Click;
@@ -29,7 +27,7 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
 
         private void ButtonSetPhoto_Click(object sender, EventArgs e)
         {
-            notifyAll();
+            notifyAllListeners();
         }
 
         private void ButtonRandPhoto_Click(object sender, EventArgs e)
@@ -41,9 +39,9 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
             PhotoURL = chosenPhotoURL;
         }
 
-        private void notifyAll()
+        private void notifyAllListeners()
         {
-            CoverPhotoChangedNotifier.Invoke(PhotoURL);
+            CoverPhotoChanged?.Invoke(PhotoURL);
         }
     }
 }
