@@ -32,8 +32,9 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
             m_PanelSpecialFeatures.Location = new System.Drawing.Point(420, 195);
             m_PanelSpecialFeatures.Name = "PanelSpecialFeatures";
             m_PanelSpecialFeatures.Size = new System.Drawing.Size(130, 210);
-            m_PanelSpecialFeatures.Add(new DesignedButton() { CommandDelegate = ShowFaceLoveFeature, Text = "FaceLove", BackColor = Color.LightPink });
-            m_PanelSpecialFeatures.Add(new DesignedButton() { CommandDelegate = ShowDislikeFeature, Text = "Dislike", BackColor = Color.Red });
+            m_PanelSpecialFeatures.Add(new DesignedButton() { CommandDelegate = showFaceLoveFeature, Text = "FaceLove", BackColor = Color.LightPink });
+            m_PanelSpecialFeatures.Add(new DesignedButton() { CommandDelegate = showDislikeFeature, Text = "Dislike", BackColor = Color.Red });
+            m_PanelSpecialFeatures.Add(new DesignedButton() { CommandDelegate = changeCoverPhoto, Text = "Change Cover", BackColor = Color.Orange });
 
             m_PanelShowDetails = new DesignedPanel();
             m_PanelShowDetails.BackColor = Color.SteelBlue;
@@ -42,9 +43,10 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
             m_PanelShowDetails.Location = new System.Drawing.Point(220, 195);
             m_PanelShowDetails.Name = "PanelShowDetails";
             m_PanelShowDetails.Size = new System.Drawing.Size(130, 210);
-            m_PanelShowDetails.Add(new DesignedButton() { CommandDelegate = ShowFriends, Text = "Show Friends", BackColor = Color.Gray });
-            m_PanelShowDetails.Add(new DesignedButton() { CommandDelegate = ShowPosts, Text = "Show Posts", BackColor = Color.Gray });
-            m_PanelShowDetails.Add(new DesignedButton() { CommandDelegate = ShowCheckins, Text = "Show Check-ins", BackColor = Color.Gray });
+            m_PanelShowDetails.Add(new DesignedButton() { CommandDelegate = showFriends, Text = "Show Friends", BackColor = Color.Gray });
+            m_PanelShowDetails.Add(new DesignedButton() { CommandDelegate = showPosts, Text = "Show Posts", BackColor = Color.Gray });
+            m_PanelShowDetails.Add(new DesignedButton() { CommandDelegate = showCheckins, Text = "Show Check-ins", BackColor = Color.Gray });
+
 
             this.Controls.Add(m_PanelSpecialFeatures);
             this.Controls.Add(m_PanelShowDetails);
@@ -157,34 +159,46 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
                 MessageBox.Show("cannot post an empty status!");
             }
         }
-        private void ShowFaceLoveFeature()
+        private void showFaceLoveFeature()
         {
             FormFaceLoveFeature formFaceLove = new FormFaceLoveFeature(AppManager.Instance.LoggedInUser);
             formFaceLove.ShowDialog();
         }
 
-        private void ShowDislikeFeature()
+        private void showDislikeFeature()
         {
             FormDislikeFeature formDislike = new FormDislikeFeature();
             formDislike.ShowDialog();
         }
 
-        private void ShowFriends()
+        private void showFriends()
         {
             FormFriendsDetails formFriendsDetails = new FormFriendsDetails();
             formFriendsDetails.ShowDialog();
         }
 
-        private void ShowPosts()
+        private void showPosts()
         {
             FormPostDetails formPostDetails = new FormPostDetails();
             formPostDetails.ShowDialog();
         }
 
-        private void ShowCheckins()
+        private void showCheckins()
         {
             FormCheckInsDetails formCheckInsDetails = new FormCheckInsDetails();
             formCheckInsDetails.ShowDialog();
+        }
+
+        private void changeCoverPhoto()
+        {
+            ChangeCoverPictureForm changeCoverPictureForm = new ChangeCoverPictureForm();
+            changeCoverPictureForm.CoverPhotoChangedNotifier += coverPhotoChangeListener;
+            changeCoverPictureForm.ShowDialog();
+        }
+
+        private void coverPhotoChangeListener(string i_PhotoURL)
+        {
+            this.pictureBoxCoverPhoto.LoadAsync(i_PhotoURL);
         }
     }
 }

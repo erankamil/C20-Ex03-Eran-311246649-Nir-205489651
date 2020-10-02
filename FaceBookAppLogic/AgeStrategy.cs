@@ -9,7 +9,7 @@ namespace FaceBookAppLogic
         bool ShouldAdd(User i_Friend);
     }
 
-    public class AgeAndGenderStrategy : IAddFriendStrategy
+    public class AgeStrategy : IAddFriendStrategy
     {
         public Point AgeRange { get; set; }
 
@@ -19,7 +19,7 @@ namespace FaceBookAppLogic
         {
             int friendAge = AppManager.Instance.GetFriendAge(i_Friend.Birthday);
             string friendGender = i_Friend.Gender.ToString().ToLower();
-            return (friendAge == 0 || (friendAge >= AgeRange.X && friendAge <= AgeRange.Y)) && (friendGender == Gender || Gender == "both");
+            return ((friendAge >= AgeRange.X && friendAge <= AgeRange.Y)) && (friendGender == Gender || Gender == "both");
         }
     }
 }

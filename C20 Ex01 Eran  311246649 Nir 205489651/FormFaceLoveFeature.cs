@@ -76,7 +76,7 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
         {
             if (AppManager.Instance.CheckValidGender(ref i_SelectedGender))
             {
-                FaceLoveLogic.AddFriendStrategy = new AgeAndGenderStrategy { Gender = i_SelectedGender.ToLower(), AgeRange = FaceLoveLogic.GetAgeRange(i_SelectedAgeRange) };
+                FaceLoveLogic.AddFriendStrategy = new AgeStrategy { Gender = i_SelectedGender.ToLower(), AgeRange = FaceLoveLogic.GetAgeRange(i_SelectedAgeRange) };
 
                 m_OptionalFriends = AppManager.Instance.GetOptionalFriendsForDating(i_SelectedGender, i_SelectedAgeRange);
                 if (m_OptionalFriends.Count > 0)

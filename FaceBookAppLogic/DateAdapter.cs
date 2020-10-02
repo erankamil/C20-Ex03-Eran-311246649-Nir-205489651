@@ -49,7 +49,7 @@ namespace FaceBookAppLogic
             }
             else
             {
-                date = DateTime.Now;
+                date = new DateTime(1995, 4, 11);
             }
 
             return date;

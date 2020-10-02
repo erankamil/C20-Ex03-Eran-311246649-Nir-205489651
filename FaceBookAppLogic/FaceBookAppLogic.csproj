@@ -35,12 +35,14 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AgeAndGenderStrategy.cs" />
+    <Compile Include="AgeStrategy.cs" />
     <Compile Include="AppManager.cs" />
     <Compile Include="DateAdapter.cs" />
     <Compile Include="DislikeLogic.cs" />
     <Compile Include="FaceLoveLogic.cs" />
     <Compile Include="FBbirthdate.cs" />
+    <Compile Include="CountryStrategy.cs" />
+    <Compile Include="MonthStrategy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Facebook">
