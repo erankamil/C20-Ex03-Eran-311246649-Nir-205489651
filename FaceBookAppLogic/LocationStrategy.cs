@@ -4,7 +4,7 @@ using FaceBookAppLogic;
 
 namespace FaceBookAppLogic
 {
-    public class CountryStrategy : IAddFriendStrategy
+    public class LocationStrategy : IAddFriendStrategy
     {
         public string Gender { get; set; }
 

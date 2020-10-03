@@ -4,7 +4,7 @@ using System;
 
 namespace FaceBookAppLogic
 {
-    class MonthStrategy : IAddFriendStrategy
+    class BithdateStrategy : IAddFriendStrategy
     {
         public string Gender { get; set; }
 

@@ -41,8 +41,8 @@
     <Compile Include="DislikeLogic.cs" />
     <Compile Include="FaceLoveLogic.cs" />
     <Compile Include="FBbirthdate.cs" />
-    <Compile Include="CountryStrategy.cs" />
-    <Compile Include="MonthStrategy.cs" />
+    <Compile Include="LocationStrategy.cs" />
+    <Compile Include="BithdateStrategy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Facebook">
