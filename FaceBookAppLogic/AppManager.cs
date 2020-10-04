@@ -173,6 +173,7 @@ namespace FaceBookAppLogic
         {
             return Enum.GetNames(typeof(eGender));
         }
+
         public int GetFriendAge(string i_FriendBirthdateStr)
         {
             DateAdapter dateAdapter = new DateAdapter();

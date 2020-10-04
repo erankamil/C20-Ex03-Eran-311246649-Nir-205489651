@@ -23,6 +23,7 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
             InitializeComponent();
             InitializeCommandPanels();
         }
+
         private void InitializeCommandPanels()
         {
             m_PanelSpecialFeatures = new DesignedPanel();
@@ -35,7 +36,6 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
             m_PanelSpecialFeatures.Add(new DesignedButton() { CommandDelegate = showFaceLoveFeature, Text = "FaceLove", BackColor = Color.LightPink });
             m_PanelSpecialFeatures.Add(new DesignedButton() { CommandDelegate = showDislikeFeature, Text = "Dislike", BackColor = Color.Red });
             m_PanelSpecialFeatures.Add(new DesignedButton() { CommandDelegate = changeCoverPhoto, Text = "Change Cover", BackColor = Color.Orange });
-
             m_PanelShowDetails = new DesignedPanel();
             m_PanelShowDetails.BackColor = Color.SteelBlue;
             m_PanelShowDetails.BringToFront();
@@ -46,12 +46,9 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
             m_PanelShowDetails.Add(new DesignedButton() { CommandDelegate = showFriends, Text = "Show Friends", BackColor = Color.Gray });
             m_PanelShowDetails.Add(new DesignedButton() { CommandDelegate = showPosts, Text = "Show Posts", BackColor = Color.Gray });
             m_PanelShowDetails.Add(new DesignedButton() { CommandDelegate = showCheckins, Text = "Show Check-ins", BackColor = Color.Gray });
-
-
             this.Controls.Add(m_PanelSpecialFeatures);
             this.Controls.Add(m_PanelShowDetails);
         }
-
 
         protected override void OnShown(EventArgs e)
         {
@@ -159,6 +156,7 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
                 MessageBox.Show("cannot post an empty status!");
             }
         }
+
         private void showFaceLoveFeature()
         {
             FormFaceLoveFeature formFaceLove = new FormFaceLoveFeature(AppManager.Instance.LoggedInUser);
@@ -192,11 +190,11 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
         private void changeCoverPhoto()
         {
             FormChangeCoverPicture changeCoverPictureForm = new FormChangeCoverPicture();
-            changeCoverPictureForm.CoverPhotoChanged += coverPhotoChangeListener;
+            changeCoverPictureForm.CoverPhotoChanged += updateCoverPhoto;
             changeCoverPictureForm.ShowDialog();
         }
 
-        private void coverPhotoChangeListener(string i_PhotoURL)
+        private void updateCoverPhoto(string i_PhotoURL)
         {
             this.pictureBoxCoverPhoto.LoadAsync(i_PhotoURL);
         }

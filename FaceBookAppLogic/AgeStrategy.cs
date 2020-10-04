@@ -19,7 +19,7 @@ namespace FaceBookAppLogic
         {
             int friendAge = AppManager.Instance.GetFriendAge(i_Friend.Birthday);
             string friendGender = i_Friend.Gender.ToString().ToLower();
-            return ((friendAge >= AgeRange.X && friendAge <= AgeRange.Y)) && (friendGender == Gender || Gender == "both");
+            return (friendAge >= AgeRange.X && friendAge <= AgeRange.Y) && (friendGender == Gender || Gender == "both");
         }
     }
 }

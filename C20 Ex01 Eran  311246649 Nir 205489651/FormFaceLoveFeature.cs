@@ -11,7 +11,6 @@ using FaceBookAppLogic;
 
 namespace C20_Ex01_Eran__311246649_Nir_205489651
 {
-
     public partial class FormFaceLoveFeature : Form
     {
         private List<User> m_OptionalFriends;
