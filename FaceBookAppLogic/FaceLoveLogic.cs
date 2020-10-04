@@ -20,7 +20,7 @@ namespace FaceBookAppLogic
             {
                 foreach (User Currentfriend in i_LoggedInUser.Friends)
                 {
-                    if(AddFriendStrategy.ShouldAdd(Currentfriend) == true)
+                    if (AddFriendStrategy.ShouldAdd(Currentfriend) == true)
                     {
                         optionalFriends.Add(Currentfriend);
                     }
