@@ -23,6 +23,7 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
             InitializeComponent();
             this.buttonRandPhoto.Click += ButtonRandPhoto_Click;
             this.buttonSetPhoto.Click += ButtonSetPhoto_Click;
+            this.buttonSetPhoto.Enabled = false;
         }
 
         private void ButtonSetPhoto_Click(object sender, EventArgs e)
@@ -32,6 +33,7 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
 
         private void ButtonRandPhoto_Click(object sender, EventArgs e)
         {
+            this.buttonSetPhoto.Enabled = true;
             Random rand = new Random();
             int indexAlbum = rand.Next(0, AppManager.Instance.LoggedInUser.Albums.Count - 1);
             string chosenPhotoURL = AppManager.Instance.LoggedInUser.Albums[indexAlbum].PictureThumbURL;

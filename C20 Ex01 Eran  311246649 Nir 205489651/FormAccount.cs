@@ -196,7 +196,10 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
 
         private void updateCoverPhoto(string i_PhotoURL)
         {
-            this.pictureBoxCoverPhoto.LoadAsync(i_PhotoURL);
+            if (string.IsNullOrEmpty(i_PhotoURL) == false)
+            {
+                this.pictureBoxCoverPhoto.LoadAsync(i_PhotoURL);
+            }
         }
     }
 }
