@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-
 namespace C20_Ex01_Eran__311246649_Nir_205489651
 {
     public class DesignedPanel : Panel

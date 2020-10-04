@@ -23,6 +23,7 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
             InitializeComponent();
             InitializeCommandPanels();
         }
+
         private void InitializeCommandPanels()
         {
             m_PanelSpecialFeatures = new DesignedPanel();
@@ -47,11 +48,9 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
             m_PanelShowDetails.Add(new DesignedButton() { CommandDelegate = showPosts, Text = "Show Posts", BackColor = Color.Gray });
             m_PanelShowDetails.Add(new DesignedButton() { CommandDelegate = showCheckins, Text = "Show Check-ins", BackColor = Color.Gray });
 
-
             this.Controls.Add(m_PanelSpecialFeatures);
             this.Controls.Add(m_PanelShowDetails);
         }
-
 
         protected override void OnShown(EventArgs e)
         {
@@ -159,6 +158,7 @@ namespace C20_Ex01_Eran__311246649_Nir_205489651
                 MessageBox.Show("cannot post an empty status!");
             }
         }
+
         private void showFaceLoveFeature()
         {
             FormFaceLoveFeature formFaceLove = new FormFaceLoveFeature(AppManager.Instance.LoggedInUser);

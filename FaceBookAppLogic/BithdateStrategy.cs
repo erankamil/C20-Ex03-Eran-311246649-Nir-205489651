@@ -1,10 +1,10 @@
-﻿using FacebookWrapper.ObjectModel;
+﻿using System;
+using FacebookWrapper.ObjectModel;
 using FaceBookAppLogic;
-using System;
 
 namespace FaceBookAppLogic
 {
-    class BithdateStrategy : IAddFriendStrategy
+    internal class BithdateStrategy : IAddFriendStrategy
     {
         public string Gender { get; set; }
 

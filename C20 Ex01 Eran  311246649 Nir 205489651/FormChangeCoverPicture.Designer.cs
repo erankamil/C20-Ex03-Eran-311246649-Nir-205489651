@@ -1,6 +1,6 @@
 ﻿namespace C20_Ex01_Eran__311246649_Nir_205489651
 {
-    partial class FormChangeCoverPicture
+    public partial class FormChangeCoverPicture
     {
         /// <summary>
         /// Required designer variable.
@@ -17,6 +17,7 @@
             {
                 components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 

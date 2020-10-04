@@ -9,19 +9,18 @@ using FacebookWrapper.ObjectModel;
 
 namespace FaceBookAppLogic
 {
-     public  static class FaceLoveLogic
+    public static class FaceLoveLogic
     {
         public static IAddFriendStrategy AddFriendStrategy { get; set; }
 
         public static List<User> GetOptionalFriendsForDating(string i_Gender, string i_AgeRange, User i_LoggedInUser)
         {
-
             List<User> optionalFriends = new List<User>();
             try
             {
                 foreach (User Currentfriend in i_LoggedInUser.Friends)
                 {
-                    if(AddFriendStrategy.ShouldAdd(Currentfriend) == true)
+                    if (AddFriendStrategy.ShouldAdd(Currentfriend) == true)
                     {
                         optionalFriends.Add(Currentfriend);
                     }
